@@ -16,19 +16,22 @@ class TreeNode:
         self.left = None
         self.right = None
 
-def SearchItem(node,n):
+def InsertItem(node,data):
 
-    found = False
-    
-    while node and not found:
-        if node.data == n:
-            found = True
-        elif n < node.data:
-            node = node.left
-        elif n > node.data:
-            node = node.right
-    
-    return found
+    if node:
+        if data < node.data:
+            if node.left is None:
+                node.left = TreeNode(data)
+            else:
+                InsertItem(node.left,data)
+        else:
+            if node.right is None:
+                node.right = TreeNode(data)
+            else:
+                InsertItem(node.right,data)
+    else:
+        node.data = data
+        
 
 if __name__ == '__main__':
     
@@ -40,5 +43,6 @@ if __name__ == '__main__':
     root.right.left = TreeNode(5)
     root.right.right = TreeNode(7)
     
-    print(SearchItem(root,5))
-    print(SearchItem(root,10))
+    InsertItem(root,0)
+    InsertItem(root,10)
+    
