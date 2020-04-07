@@ -1,8 +1,9 @@
-# -*- coding: utf-8 -*-
 """
-Created on Fri Apr  3 22:45:15 2020
+Binary Search Tree
 
-@author: Rajkumar
+1. Left node is lesser than root node
+2. Right node is greater than root node
+
 """
 
 class BinarySearchTree:

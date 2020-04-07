@@ -1,8 +1,15 @@
-# -*- coding: utf-8 -*-
 """
-Created on Sun Apr  5 20:21:27 2020
+ * Sample input:  
+ * [1,2,3,4,5,6,7]
+ *
+ * Sample :
+ *
+ *          4
+ *         / \
+ *        2   6
+ *       / \  / \
+ *      1   3 5  7
 
-@author: Rajkumar
 """
 
 class Tree:
